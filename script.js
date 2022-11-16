@@ -64,7 +64,7 @@
         var loose = 0;
         var tie = 0
         for (let i = 0; i < 5; i++) {
-            var playerSelection = prompt("ROUND:" + (i+1) + "\nwins:\t" + win + "\nlooses:\t" +  loose + "\ntie:\t" + tie + "\npaper, scissors or stone?");
+            var playerSelection = prompt("ROUND:" + (i+1) + "\nwins:\t" + win + "\nlooses:\t" +  loose + "\ntie:\t" + tie + "\npaper, scissors or stone?").toUpperCase();
             let computerSelection = getComputerChoice();
             if (playRound(playerSelection, computerSelection) == 1) {
                 win++;
