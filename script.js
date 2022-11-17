@@ -1,3 +1,11 @@
+// UI development
+const reset = document.querySelector('#reset');
+reset.addEventListener('click', () => {
+alert("Hello World");
+}
+
+
+// Game Logic from prev xrcise
     function getComputerChoice () {
         return Math.floor(Math.random()*3);
     }

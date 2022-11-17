@@ -1,0 +1,52 @@
+*, *::after, *::before {
+    border: 1px solid red;
+    /* box-sizing: border-box; */
+}
+body {
+    background-color: darkgoldenrod;
+}
+.heads {
+    font-weight: bolder;
+    font-size: 24px;
+
+}
+p {
+    margin: 0;
+}
+.round {
+    background-color: azure;
+    width: 58px;
+    height: 84px;
+    font-size: 24px;
+    margin: 42px;
+    padding: 0;
+    text-align: center;
+}
+.content {
+    position: relative;
+    bottom: 0;
+}
+
+.wins {
+    background-color: #9fff9f;
+
+}
+.looses {
+    background-color: #ff9f9f;
+}
+.tie {
+    background-color: #666;
+}
+.rock {
+    background-color: #61493b;
+}
+.paper {
+    background-color: #e6e6c9;
+}
+.scissor {
+    background-color: #9f9fff;
+}
+.reset {
+    background-color: slategray;
+    color: hsl(0, 50%, 50%)
+}
