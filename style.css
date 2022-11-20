@@ -31,6 +31,8 @@ p {
 }
 .round {
     background-color: azure;
+    margin-left: auto;
+    margin-right: auto;
 }   
 .content {
     padding-top: 12px;
@@ -51,6 +53,17 @@ p {
 }
 .tie {
     background-color: #666;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+.rock, .paper, .scissor {
+  flex: 1;
+  height: 48px;
+  text-align: center;
+  font-size: 28px;
 }
 .rock {
     background-color: #61493b;
