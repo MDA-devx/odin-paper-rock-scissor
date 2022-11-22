@@ -1,12 +1,23 @@
 // UI development
 const reset = document.querySelector('#reset');
+const winMark = document.querySelector('#wins');
+const looseMark = document.querySelector('#looses');
+const tieMark = document.querySelector('#ties');
+const roundMark = document.querySelector('#rounds');
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+
 reset.addEventListener('click', () => {
-alert("Hello World");
+// alert("Hello World");
+  win = 0;
+  loose = 0;
+  tie = 0;
 }
-
-
+)
 // Game Logic from prev xrcise
-    function getComputerChoice () {
+function getComputerChoice () {
         return Math.floor(Math.random()*3);
     }
 
@@ -72,8 +83,9 @@ alert("Hello World");
         var loose = 0;
         var tie = 0
         for (let i = 0; i < 5; i++) {
-            var playerSelection = prompt("ROUND:" + (i+1) + "\nwins:\t" + win + "\nlooses:\t" +  loose + "\ntie:\t" + tie + "\npaper, scissors or stone?").toUpperCase();
+            var playerSelection = prompt("ROUND:" + (i+1) + "\nwins:\t" + win + "\nlooses:\t" +  loose + "\ntie:\t" + tie + "\npaper, scissors or stone?");
             let computerSelection = getComputerChoice();
+            if (playerSelection != null) {
             if (playRound(playerSelection, computerSelection) == 1) {
                 win++;
             } else 
@@ -81,7 +93,9 @@ alert("Hello World");
                 tie++;
             } else
             loose++;
-        }
+        
+            } 
+            }
         if (win > loose) {
             alert("Ganaste mejor de 5");
             return true;
@@ -91,4 +105,4 @@ alert("Hello World");
 
     }
 
-game();
+// game();
