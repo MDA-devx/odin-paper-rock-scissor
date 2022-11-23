@@ -22,9 +22,8 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissor = document.querySelector('#scissor');
 
-
-reset.addEventListener('click', () => {
-// alert("Hello World");
+const resetMark = function () {
+  // alert("Hello World");
   win = 0;
   loose = 0;
   tie = 0;
@@ -33,8 +32,8 @@ reset.addEventListener('click', () => {
   winMark.textContent = win;
   looseMark.textContent = loose;
   tieMark.textContent = tie;
-  }
-)
+}
+reset.addEventListener('click', resetMark(););
 rock.addEventListener('click', () => {
     playerSelection = "ROCK";
     game();
@@ -69,40 +68,26 @@ function getComputerChoice () {
     // si player = tijera & computer = 0 > perdes
     // si player = piedra & computer = 1 > perdes
     // si player = papel & computer = 2 > perdes
-    // empates 
-        if (playerSelection == "ROCK" & computerSelection == 2) {
+    // empates
+  //agrupar ifs
+        if ((playerSelection == "ROCK" & computerSelection == 2)
+        || (playerSelection == "PAPER" & computerSelection == 0)
+        || (playerSelection == "SCISSORS" & computerSelection == 1))
+        {
           //  alert("you win");
             return 1;
         }    else
-        if (playerSelection == "PAPER" & computerSelection == 0) {
-          //  alert("you win");
-            return 1;
-        }  else
-        if (playerSelection == "SCISSORS" & computerSelection == 1) {
-        //    alert("you win");
-            return 1;
-        }  else
-        if (playerSelection == "ROCK" & computerSelection == 1) {
-        //    alert("you loose");
-            return 0;
-        }  else
-        if (playerSelection == "PAPER" & computerSelection == 2) {
-    //        alert("you loose");
-            return 0;
-        }  else
-        if (playerSelection == "SCISSORS" & computerSelection == 0) {
+        if ((playerSelection == "ROCK" & computerSelection == 1) 
+        || (playerSelection == "PAPER" & computerSelection == 2) 
+        || (playerSelection == "SCISSORS" & computerSelection == 0)) 
+        {
       //      alert("you loose");
             return 0;
         }  else
-        if (playerSelection == "SCISSORS" & computerSelection == 2) {
-         //   alert("tie");
-            return 2;
-        }  else
-        if (playerSelection == "PAPER" & computerSelection == 1) {
-        //    alert("tie");
-            return 2;
-        }  else
-        if (playerSelection == "STONE" & computerSelection == 0) {
+        if ((playerSelection == "SCISSORS" & computerSelection == 2)
+        || (playerSelection == "PAPER" & computerSelection == 1) 
+        || (playerSelection == "STONE" & computerSelection == 0))
+        {
        //     alert("tie");
             return 2;
         }
@@ -136,11 +121,13 @@ function getComputerChoice () {
       if (round == 5){   
         if (win > loose) {
             alert("Ganaste mejor de 5");
+            
             return true;
-        } else
+        } else 
         alert("Perdiste mejor de 5");
         return false;
       }
+      
     }
 
 // game();
