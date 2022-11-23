@@ -1,0 +1,103 @@
+* {
+    border: 1px solid red;
+    /* box-sizing: border-box; */
+}
+html {
+  height: 100%;
+}
+/* cant c gradient n preview */
+body {
+  background: -webkit-gradient(#888 0%, #aa2 100%);
+  background: -moz-linear-gradient(#888 0%, #aa2 100%);
+  background: -o-linear-gradient(#888 0%, #aa2 100%);
+    background: linear-gradient(
+    #888811 0%, 
+    #aa2 100%);
+}
+.title {
+  background-color: yellow;
+  text-align: center;
+  width: 100%;
+  
+}
+.heads {
+    font-weight: bolder;
+    font-size: 24px;
+
+}
+p {
+    margin: 0;
+}
+.round, .wins, .looses, .tie {
+   width: 80px;
+   height: 84px;
+   font-size: 24px;
+   margin: 8px;
+   padding: 0;
+   text-align: center;
+   flex-shrink: 0;
+   
+}
+.round {
+    background-color: azure;
+    margin-left: auto;
+    margin-right: auto;
+}   
+.content {
+    padding-top: 12px;
+    font-size: 48px;
+}
+.marker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+.wins {
+    background-color: #9fff9f;
+
+}
+.looses {
+    background-color: #ff9f9f;
+}
+.tie {
+    background-color: #666;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+.rock, .paper, .scissor {
+  flex: 1;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 28px;
+  padding: 12px;
+  margin: 9px;
+}
+.rock {
+    background-color: #61493b;
+}
+.paper {
+    background-color: #e6e6c9;
+}
+.scissor {
+    background-color: #9f9fff;
+}
+.reset {
+    background-color: slategray;
+    color: hsl(0, 50%, 50%);
+    height: 34px;
+    font-size: 23px;
+    line-height: 34px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-bottom: 12px;
+    margin-right: auto;
+    width: 80%;
+    border: 0;
+    align-self: center;
+}
