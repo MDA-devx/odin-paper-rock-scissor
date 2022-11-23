@@ -33,7 +33,7 @@ const resetMark = function () {
   looseMark.textContent = loose;
   tieMark.textContent = tie;
 }
-reset.addEventListener('click', resetMark(););
+reset.addEventListener('click', resetMark);
 rock.addEventListener('click', () => {
     playerSelection = "ROCK";
     game();
@@ -56,20 +56,7 @@ function getComputerChoice () {
     }
 
     function playRound(playerSelection, computerSelection) {
-    // funcion que compara parametros y devuelve true si ganas
-    // 0=piedra
-    // 1=papel
-    // 2=tijera
-    // ganas 
-    // si player = tijera & computer = 1 > ganas
-    // si player = papel & computer = 0 > ganas
-    // si player = piedra & computer = 2 > ganas
-    // perdes
-    // si player = tijera & computer = 0 > perdes
-    // si player = piedra & computer = 1 > perdes
-    // si player = papel & computer = 2 > perdes
-    // empates
-  //agrupar ifs
+    
         if ((playerSelection == "ROCK" & computerSelection == 2)
         || (playerSelection == "PAPER" & computerSelection == 0)
         || (playerSelection == "SCISSORS" & computerSelection == 1))
@@ -94,12 +81,6 @@ function getComputerChoice () {
     }
     function game() {
     
-       // for (let i = 0; i < 5; i++) {
-            // c0mment for buttons play
-            // var playerSelection = prompt("ROUND:" + (i+1) + "\nwins:\t" + win + "\nlooses:\t" +  loose + "\ntie:\t" + tie + "\npaper, scissors or stone?");
-          //  let computerSelection = getComputerChoice();
-         //   if (playerSelection != null) {
-         // calcular jugada comp
          round++;
          roundMark.textContent = round;
          console.log(computerSelection);
@@ -116,18 +97,14 @@ function getComputerChoice () {
             looseMark.textContent = loose;
               
             }  
-        //    } 
-         //   }
-      if (round == 5){   
-        if (win > loose) {
-            alert("Ganaste mejor de 5");
-            
-            return true;
-        } else 
+      if (win == 5){
+        alert("Ganaste mejor de 5");
+        resetMark();
+      }
+      else if (loose == 5){
         alert("Perdiste mejor de 5");
-        return false;
+        resetMark();
       }
       
-    }
-
-// game();
+      
+  }
