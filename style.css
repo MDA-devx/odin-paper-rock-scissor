@@ -13,6 +13,9 @@ body {
     #ca4713 0%, 
     #aa2 100%);
 }
+#button {
+    border: 1px solid red;
+}
 .title {
   background-color: yellow;
   text-align: center;
@@ -32,21 +35,26 @@ body {
 }
 
 .heads {
-    font-weight: bolder;
+    font-weight: light;
     font-size: 24px;
-
+    font-family: Orbitron;
 }
 p {
     margin: 0;
 }
+#rounds, #wins, #looses, #ties {
+   font-family: 'Orbitron', sans-serif;
+
+}
 .round, .wins, .looses, .tie {
-   width: 80px;
+   width: 120px;
    height: 96px;
    font-size: 24px;
    margin: 8px;
    padding: 0;
    text-align: center;
    flex-shrink: 0;
+   border: 2px dotted red;
    
 }
 .round {
@@ -80,14 +88,22 @@ p {
   justify-content: stretch;
 }
 .rock, .paper, .scissor {
+        background-image: url('../boton.svg');
+        /* width: 200px;
+        height: 200px; */
+        position: relative;
+        z-index: 1000;
+   background-color: #fff;
+   background-size: 100% 100%;
   flex: 1;
   height: 48px;
   line-height: 48px;
   text-align: center;
   font-size: 28px;
   padding: 12px;
-  margin: 9px;
+  margin: 18px;
 }
+
 .rock {
     background-color: #61493b;
 }
@@ -99,6 +115,7 @@ p {
 }
 .reset {
     background-color: slategray;
+    background-image: url('../boton.svg');
     color: hsl(0, 50%, 50%);
     height: 34px;
     font-size: 23px;
