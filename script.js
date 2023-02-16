@@ -108,3 +108,5 @@ function getComputerChoice () {
       
       
   }
+// funcion boton down bright 50%
+const btns = Array.from(document.querySelectorAll('.click'));
