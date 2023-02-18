@@ -98,15 +98,16 @@ function getComputerChoice () {
               
             }  
       if (win == 5){
-        alert("Ganaste mejor de 5");
+        alert("Ganaste !!");
         resetMark();
       }
       else if (loose == 5){
-        alert("Perdiste mejor de 5");
+        alert("Perdiste ...");
         resetMark();
       }
       
       
   }
 // funcion boton down bright 50%
-const btns = Array.from(document.querySelectorAll('.click'));
+// const btns = Array.from(document.querySelectorAll('.click'));
+// con css

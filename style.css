@@ -12,9 +12,10 @@ body {
     background: linear-gradient(
     #ca4713 0%, 
     #aa2 100%);
+    background-attachment: fixed;
 }
 #button {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .title {
   background-color: yellow;
@@ -22,6 +23,7 @@ body {
   width: 70%;
   height: auto;
   padding: 18px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
@@ -73,14 +75,14 @@ p {
   
 }
 .wins {
-    background-color: #9fff9f;
+    background-color: hsl(120, 20%, 28%);
 
 }
 .looses {
-    background-color: #ff9f9f;
+    background-color: hsl(0, 100%, 28%);
 }
 .tie {
-    background-color: #666;
+    background-color: #3f3f3f;
 }
 .btns {
   display: flex;
@@ -88,22 +90,33 @@ p {
   justify-content: stretch;
 }
 .rock, .paper, .scissor {
-        background-image: url('../boton.svg');
-        /* width: 200px;
-        height: 200px; */
-        position: relative;
-        z-index: 1000;
-   background-color: #fff;
-   background-size: 100% 100%;
-  flex: 1;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  font-size: 28px;
-  padding: 12px;
-  margin: 18px;
+    /* width: 200px;
+    height: 200px; */
+    position: relative;
+    z-index: 1000;
+    background-color: #fff;
+    flex: 1;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 28px;
+    padding: 12px;
+    margin: 18px;
 }
-
+.click:active {
+    opacity:0.9;
+    transform: translateY(3px);
+    filter: drop-shadow(5px 2px 3px #333);
+    
+    
+}
+.click {
+    transition:opacity 0s;
+    filter: drop-shadow(5px 5px 3px #000);
+    background-image: url('../boton.svg');
+    background-size: 100% 100%;
+    text-shadow: -1px -1px 1.8px black
+}
 .rock {
     background-color: #61493b;
 }
@@ -115,7 +128,6 @@ p {
 }
 .reset {
     background-color: slategray;
-    background-image: url('../boton.svg');
     color: hsl(0, 50%, 50%);
     height: 34px;
     font-size: 23px;
@@ -125,7 +137,10 @@ p {
     margin-left: auto;
     margin-bottom: 12px;
     margin-right: auto;
-    width: 80%;
+    width: 300px;
     border: 0;
     align-self: center;
+}
+.spacer {
+    height: 45px;
 }
